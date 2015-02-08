@@ -1,0 +1,19 @@
+
+/*---- news_word ----*/
+
+.black_15_tab { WORD-WRAP: break-word; MARGIN-BOTTOM: 5px; FONT-SIZE: 15px; 
+ no-repeat center bottom; WORD-BREAK: break-all; COLOR: #545353; PADDING-BOTTOM: 5px; TEXT-ALIGN: justify; MARGIN-TOP: 5px; LINE-HEIGHT: 120%}
+ 
+ .black_15_meg { WORD-WRAP: break-word; MARGIN-BOTTOM: 20px; FONT-SIZE: 15px; 
+ no-repeat center bottom; WORD-BREAK: break-all; COLOR: #545353; PADDING-BOTTOM: 10px; PADDING-left: 10px; TEXT-ALIGN: justify; MARGIN-TOP: 5px; LINE-HEIGHT: 150%}
+ 
+.news_black_13 { font-size:13px; no-repeat center bottom; COLOR: #565656; text-decoration:none;}
+ 
+.news_black_15 {  MARGIN-BOTTOM: 20px; FONT-SIZE: 1.0em; no-repeat center bottom; COLOR: #0066cc; TEXT-ALIGN: justify; LINE-HEIGHT: 200%; text-decoration:none;}
+.news_black_15 A:link {TEXT-DECORATION: none; COLOR: #0066cc;}
+.news_black_15 A:visited { COLOR: #0066cc; text-decoration:none}
+.news_black_15 A:hover { POSITION: relative; COLOR: #9c2626; LEFT: 1px; TOP: 1px; text-decoration:none}
+.news_data_black_15 {  MARGIN-BOTTOM: 20px; FONT-SIZE: 1.0em; no-repeat center bottom; COLOR: #0066cc; TEXT-ALIGN: justify; LINE-HEIGHT: 200%; text-decoration:none; text-align:center}
+
+
+

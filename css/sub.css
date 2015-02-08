@@ -1,0 +1,40 @@
+
+/* ----------------------------------------------------------------------------------------------------------
+1) side_menu and content
+---------------------------------------------------------------------------------------------------------- */
+#side_menu {
+	width: 250px;
+	float: left;
+	margin-bottom: 10px;
+}
+#side_content {padding-left:0px; padding-right:15px; width:750x; float: right; margin-bottom: 10px;}
+
+.menu {	width: 220px; overflow: hidden;	padding-top: 15px; padding-right: 0px; padding-bottom: 3px; padding-left: 20px; line-height:30px;}
+.menu li { margin:0 ; list-style-type:none; line-height:0;}
+.menu li a {display:block; line-height:30px; padding-left:5px; padding-bottom: 15px; background:url(../images/menu/side_menu_bg.png) no-repeat; 
+            color:#fff; font-size:18px; font-weight:bold; text-decoration:none;}
+.menu li a:hover { color: #844911;font-size:18px; font-weight:bold; ; background-image: url(../images/menu/side_menu_bg_hover.png); background-repeat: no-repeat;}
+.menu .current a {background:url(../images/menu/side_menu_bg_hover_current.png) no-repeat center; color: #844911; text-decoration:none; line-height:30px; padding-bottom: 10px;}
+.menu ul {margin:0; padding:0;}
+
+.posttext { clear:both; padding-top:5px; line-height:30px; font-size:18px;  width:750x;}
+
+
+/* ----------------------------------------------------------------------------------------------------------
+2) content
+---------------------------------------------------------------------------------------------------------- */
+.content td { line-height:30px; padding-left:6px; font-size:16px; color:#565558;}
+.content th { line-height:30px; color:#565558; font-size:16px; font-weight:500; letter-spacing:2px;  }
+
+.resultstab td { line-height:30px; border-bottom:solid 1px #d9d9d9; border-top:solid 1px #d9d9d9; border-right:solid 1px #d9d9d9; border-left:solid 1px #d9d9d9; padding-left:6px; font-size:16px; color:#565558;}
+.resultstab th { line-height:30px; color:#565558; font-size:16px; font-weight:bold; border-bottom:solid 1px #d9d9d9; border-top:solid 1px #d9d9d9; border-right:solid 1px #d9d9d9; border-left:solid 1px #d9d9d9; letter-spacing:2px; background-color:#b3ebfd  }
+
+.table td { line-height:30px; border-bottom:solid 1px #d9d9d9; border-top:solid 1px #d9d9d9; border-right:solid 1px #d9d9d9; border-left:solid 1px #d9d9d9; padding-left:6px; font-size:16px; color:#565558;}
+.table tr:hover { background-color:#F0FED3; color:#000;}
+.table th { line-height:30px; color:#565558; font-size:16px; font-weight:500; border-bottom:solid 1px #096; border-top:solid 1px #096; letter-spacing:2px; background:url(../images/th_bg2.png); }
+
+
+
+
+
+					 
