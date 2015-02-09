@@ -5,15 +5,16 @@ style css
 /* Contact Form */
 
 	p.error								{margin-left:140px; margin-top:10px; color: red}
-	#contact_form ul					{float:left;}
+	/*#contact_form ul					{float:left;}
 	#contact_form ul li					{margin:10px 0; list-style:none; position:relative; clear:both;}
-	#contact_form label					{line-height:35px; width:50px; text-align:right; float:left; margin-right:10px;}
+	#contact_form label					{line-height:40px; width:50px; text-align:right; float:left; margin-right:10px;}*/
 	#contact_form input#name,
 	#contact_form input#email_main,
 	#contact_form input#email_opt,
 	#contact_form input#subject,
-	#contact_form textarea				{float:left; padding:8px; border:1px solid #CCCCCC; margin-left:10px; background:#fcfcfc; -moz-border-radius:5px; -webkit-border-radius:5px;}
-	#contact_form input#name,
-	#contact_form input#subject			{width:400px;}
-	#contact_form textarea				{width:500px;height:150px; resize: none;}
+	#contact_form input#phone,			{line-height:45px; margin-top:8px;}
+	#contact_form input#phonemy-captcha 
+	#contact_form textarea				{float:left; padding:8px; margin-left:0px; background:#fcfcfc; -moz-border-radius:5px; -webkit-border-radius:5px;}
+	#contact_form input#subject			{width:100px;}
+	#contact_form textarea				{width:400px; height:150px; resize: none;}
 	#contact_form input.button			{float:right;}

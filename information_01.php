@@ -1,3 +1,22 @@
+<?php require_once( 'adminx/cms.php' ); ?>
+<cms:template title='Blog' clonable='1' commentable='1'>
+  <cms:editable name='blog_content' type='richtext' />
+  
+  <cms:editable name='blog_image'
+    crop='1'
+    width='610'
+    height='150'
+    type='image'
+  />
+  
+<!--   <cms:folder name="philosophy" title="Philosophy" />
+  <cms:folder name="history" title="History" />
+  <cms:folder name="jobs" title="Jobs" />
+  <cms:folder name="staff" title="Staff" />
+  <cms:folder name="clients" title="Clients" /> -->
+  
+</cms:template>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -39,7 +58,7 @@ function MM_swapImage() { //v3.0
 	  <tr>
 	    <th align="center" scope="col"><table width="1026" border="0" cellpadding="0" cellspacing="0">
 	      <tr>
-	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
+	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
 	        </tr>
 	      </table></th>
 	    </tr>
@@ -60,43 +79,35 @@ function MM_swapImage() { //v3.0
                 <table width="740" border="0" cellpadding="0" cellspacing="0" class="content">
                   <tr>
                     <th height="300" colspan="2" align="right"><table><tr>
-                      <td width="714"><p><strong>基隆市區域計畫網站開站</strong></p>
-                        <p><span class="news_black_13">發布單位 : 財團法人國土規劃及不動產資訊中心(2015/02/26)</span><br />
-                          <br />
-                          為提供有關「基隆市區域計畫」完整資訊，架設網站以提供相關資訊供各位參考及瞭解，歡迎各位多加使用。 <br />
-                        </p></td></tr>
+                      <td width="714">
+
+                      <!-- cms content editor block-->
+                      <div class="prop_desc">
+                          <span class="gray">
+                              <cms:editable name='prop_desc' type='richtext'>
+                              <!-- edit content from CMS backend -->
+                              </cms:editable>
+                          </span>
+                          <br class="clear"/>
+
+                          <!--
+                          <cms:editable 
+                            name='my_document'
+                            label='Downloadable File'
+                            desc='Upload the file here'
+                            type='file'
+                          />
+
+                           <a href="<cms:show my_document />" >下載</a> -->
+                        </div>
+
+                        <!-- cms content editor block -->
                         <tr>
                           <td align="right" class="news_black_13">更多瀏覽~</td>
                         </tr>
                     </table>
-                      <br />
-                      <table width="98%" border="0" cellpadding="0" cellspacing="0">
-                        <tr class="resultstab">
-                          <th width="15%" bgcolor="#EEEEEE" scope="col">時間</th>
-                          <th width="85%" bgcolor="#EEEEEE" scope="col">內文</th>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>2015/02/01</td>
-                          <td>基隆市區域計畫網站開站</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                        </tr>
-                      </table>                    
-                      <p><span class="news_black_13">更多瀏覽~</span></p></th>                    
+
+                      <br />      
                   </tr>                 
                 </table>
               </div>
@@ -118,3 +129,4 @@ function MM_swapImage() { //v3.0
 
 </body>
 </html>
+<?php COUCH::invoke(); ?> 

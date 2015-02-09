@@ -1,12 +1,5 @@
 <?php require_once( 'adminx/cms.php' ); ?>
-<cms:template title='意見表達' >
-  <!-- <cms:editable name='group_social' label='Social Profiles' desc='Your accounts on Social sites' type='group' />
-  <cms:editable name='twitter_id' label='Your Twitter ID' group='group_social' type='text'/>
-  <cms:editable name='facebook_id' label='Your Facebook ID' group='group_social' type='text'/>
-  <cms:editable name='stumbleupon_id' label='Your StumbleUpon ID' group='group_social' type='text'/>
-  <cms:editable name='flickr_id' label='Your Flickr ID' group='group_social' type='text'/>
-  <cms:editable name='delicious_id' label='Your Delicious ID' group='group_social' type='text'/>     -->
-</cms:template>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -53,7 +46,7 @@ function MM_swapImage() { //v3.0
 	  <tr>
 	    <th align="center" scope="col"><table width="1026" border="0" cellpadding="0" cellspacing="0">
 	      <tr>
-	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
+	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
 	        </tr>
 	      </table></th>
 	    </tr>
@@ -63,7 +56,7 @@ function MM_swapImage() { //v3.0
           <div class="menu">
            <ul>
               <li>　　　　</li>              
-              <li class="current"><a href="expression_01.html">意見表達</a></li>                      
+              <li class="current"><a href="expression_01.php">意見表達</a></li>                      
             </ul>
           </div>
         </div>
@@ -126,7 +119,7 @@ function MM_swapImage() { //v3.0
                         <p id='mail_success' class='success' style="display:block">您的訊息已送出，我們會儘速處理您的意見。</p>
                         
                         <cms:send_mail from=k_email_from to=k_email_to subject='意見表達'>
-                          The following is an email sent by a visitor to your site:
+                          來自網站上的意見表達 >>>>
                           <cms:show k_success />
                         </cms:send_mail>
                       </cms:if>

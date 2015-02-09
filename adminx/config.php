@@ -30,7 +30,7 @@
     // -4.5   Venezuela (UTC-04:30)
     // -6     United States (Central Time) (UTC-06:00)
     // -8     United States (Pacific Time) (UTC-08:00)
-    define( 'K_GMT_OFFSET', +5.5 );
+    define( 'K_GMT_OFFSET', +8 );
 
     // 3.
     // Define the charset used by your site. If in any doubt, leave the default utf-8.
@@ -88,11 +88,11 @@
 
     // 13.
     // Your Email address. Will be used in contact forms.
-    define( 'K_EMAIL_TO', 'harryhow@gmail.com' );
+    define( 'K_EMAIL_TO', 'glup2015@gmail.com' );
 
     // 14.
     // Will be used as the sender of messages delivered by contact forms to the address above.
-    define( 'K_EMAIL_FROM', 'harryhow@gmail.com' );
+    define( 'K_EMAIL_FROM', 'glup2015@gmail.com' );
 
     // 15.
     // By default the inbuilt php function 'mail()' is used to deliver messages.
@@ -104,21 +104,21 @@
     // Google Maps API Key.
     // You'll have to get one for your site from 'http://code.google.com/apis/maps/'
     // if your site makes use of Google maps.
-    define( 'K_GOOGLE_KEY', 'ABQIAAAAD7z_FToS5NSqosnG9No1ABQYPrehWcZJH1ec0SZqipYFbK_nfRT1ryCGKzl5KGpFG3y5jyPe_uClVg' );
+    //define( 'K_GOOGLE_KEY', 'ABQIAAAAD7z_FToS5NSqosnG9No1ABQYPrehWcZJH1ec0SZqipYFbK_nfRT1ryCGKzl5KGpFG3y5jyPe_uClVg' );
 
     // Set the following if you use PayPal buttons to sell products.
     // 17.
     // Set this to zero once you are ready to go live
-    define( 'K_PAYPAL_USE_SANDBOX', 1 );
+    //define( 'K_PAYPAL_USE_SANDBOX', 1 );
     // 18.
     // Email address of your PayPal 'business' account selling the item
-    define( 'K_PAYPAL_EMAIL', 'seller_1272492192_biz@gmail.com' );
+    //define( 'K_PAYPAL_EMAIL', 'seller_1272492192_biz@gmail.com' );
     // 19. 
     // A three letter code for the currency you do your business in.
     // Some valid values are: AUD(Australian Dollar), CAD(Canadian Dollar), EUR(Euro),
     // GBP (Pound Sterling), JPY (Japanese Yen) and USD (U.S. Dollar).
     // Please check PayPal to find yours.
-    define( 'K_PAYPAL_CURRENCY', 'USD' );
+    //define( 'K_PAYPAL_CURRENCY', 'USD' );
 
     // 20.
     // A setting of '1' will necessitate the admin to approve comments before they get published.

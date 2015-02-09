@@ -6,7 +6,7 @@
 <link rel="stylesheet" media="screen,projection" type="text/css" href="css/reset.css" />
 <link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
 <link rel="stylesheet" media="screen,projection" type="text/css" href="css/sub.css" />
-
+<link href="css/text.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
@@ -30,10 +30,11 @@ function MM_swapImage() { //v3.0
 }
 </script>
 </head>
+
 <body onload="MM_preloadImages('images/menu/item_1r.jpg','images/menu/item_2r.jpg','images/menu/item_3r.jpg','images/menu/item_4r.jpg','images/menu/item_5r.jpg','images/menu/item_6r.jpg','images/menu/item_7r.jpg')">
 <div align="center" width="1024" id="bag">
 <table>
-	<tr><td>
+	<tr><td height="866">
     <div id="item">
       <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	  <tr>
@@ -44,36 +45,77 @@ function MM_swapImage() { //v3.0
 	      </table></th>
 	    </tr>
 	  <tr>
-	    <th height="753" align="center" valign="top" bgcolor="#FFFFFF" scope="col">
+	    <th height="503" align="center" valign="top" bgcolor="#FFFFFF" scope="col">
         <div id="side_menu">
           <div class="menu">
-            <ul>
+           <ul>
               <li>　　　　</li>
-              <li><a href="index.html">計畫緣起</a></li>
-              <li><a href="background_02.html">計畫背景</a></li>
-              <li><a href="background_03.html">發展現況與預測</a></li>
-              <li class="current"><a href="background_04.html">空間發展課題</a></li>
-              <li><a href="background_05.html">城鄉發展模式</a></li>
-              <li><a href="background_06.html">區域功能分工</a></li>
+              <li class="current"><a href="information_01.html">新聞稿/最新消息</a></li>
+              <li><a href="information_02.html">基隆市區域計畫委員名單</a></li>
+              <li><a href="information_03.html">計畫辦理進度</a></li>                      
             </ul>
           </div>
         </div>
           <div id="side_content">
              <div class="posttext">
-                <table width="740px" border="0" cellpadding="0" cellspacing="0" class="content">
+                <table width="740" border="0" cellpadding="0" cellspacing="0" class="content">
                   <tr>
-                    <th align="left"><p><img src="images/blue_dot.png" width="21" height="6" alt="圖" />如何與台北港清楚分工,帶動港市轉型?<br />
-                        <img src="images/blue_dot.png" width="21" height="6" alt="圖" />如何善用區位優勢,提升土地使用效益?<br />
-                        <img src="images/blue_dot.png" width="21" height="6" alt="圖" />如何活化都市機能,推動舊區更新?<br />
-                        <img src="images/blue_dot.png" width="21" height="6" alt="圖" />如何兼顧基隆河流域之保育,推動地用轉型?<br />
-                        <img src="images/blue_dot.png" width="21" height="6" alt="圖" />如何加速提升聯外與公共運具運能整合效能?<br />
-                        <img src="images/blue_dot.png" width="21" height="6" alt="圖" />如何面對氣候變遷的挑戰與重大災害?<br />
-                        <img src="images/blue_dot.png" width="21" height="6" alt="圖" />如何自主與雙北合作,推動跨域治理?<br />
-                      <br />
-                      </p>
-                      <p><br />
-                    </p></th>                    
-                  </tr>
+                    <th height="300" colspan="2" align="right">
+                    <table><tr>
+                      <td width="714">
+                     
+                      <!-- cms content editor block-->
+                      <!-- Column 1 /Content -->
+                          <div>
+
+                            <!-- Blog Post -->
+                            <cms:pages masterpage='information_01.php'
+                                  folder=k_folder_name
+                                  start_on=k_archive_date
+                                  stop_before=k_next_archive_date
+                                  paginate='1'
+                                  limit='3' >
+
+                              <div class="post">
+                                <!-- Post Title -->
+                                <h3 class="title"><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h3>
+                                <!-- Post Data -->
+                                <cms:if k_page_foldertitle >
+                                  <cms:set my_category=k_page_foldertitle />
+                                <cms:else />
+                                  <cms:set my_category='Uncategorised' />
+                                </cms:if>
+                                <p class="sub"><a href="#"><cms:show my_category /></a> &bull; <cms:date k_page_date format='jS M, y'/> &bull; <a href="#"><cms:show k_comments_count /> Comments</a></p>
+                                <div class="hr dotted clearfix">&nbsp;</div>
+                                <!-- Post Image -->
+                                <img class="thumb" alt="" src="<cms:show blog_image />" />
+                                <!-- Post Content -->
+                                <cms:excerptHTML count='75' ignore='img'><cms:show blog_content /></cms:excerptHTML>
+                                <!-- Read More Button -->
+                                <p class="clearfix"><a href="<cms:show k_page_link />" class="button right"> Read More...</a></p>
+                              </div>
+                              <div class="hr clearfix">&nbsp;</div>
+
+                              <cms:if k_paginated_bottom >
+                                <!-- Blog Navigation -->
+                                <p class="clearfix">
+                                  <cms:if k_paginate_link_next >
+                                    <a href="<cms:show k_paginate_link_next />" class="button float">&lt;&lt; Previous Posts</a>
+                                  </cms:if>
+
+                                  <cms:if k_paginate_link_prev >
+                                    <a href="<cms:show k_paginate_link_prev />" class="button float right">Newer Posts >></a>
+                                  </cms:if>
+                                </p>
+                              </cms:if>
+
+                            </cms:pages >
+
+                          </div>
+
+                      <!-- cms content editor block -->
+                                  
+                  </tr>                 
                 </table>
               </div>
              
@@ -83,12 +125,14 @@ function MM_swapImage() { //v3.0
      
     </div>
     </td></tr>
-</table><table><tr><td align="center" valign="middle" class="footer" >
+</table>
+<table><tr><td align="center" valign="middle" class="footer" >
   <p><br />
     基隆市政府 電話：02-2424-5001  傳真  02-2429-5179<br />
     規劃單位：財團法人國土規劃及不動產資訊中心電話：02-2367-2179    傳真 02-2362-8974<br />
     Copyright © 2015財團法人國土規劃及不動產資訊中心. All rights reserved<br />
-  </p></td></tr></table></div>
+  </p></td></tr></table><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+</div>
 
 </body>
 </html>
