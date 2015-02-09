@@ -113,6 +113,9 @@ function MM_swapImage() { //v3.0
                       <tr>
                         <td align="left">*驗證碼：</td>
                         <td> <cms:input type='captcha' name='my-captcha' format='ir-t' /></td>
+                        <cms:if k_error_my-captcha>
+                          <p id='my-captcha_error' class='error' style="display:block">* 驗證碼錯誤</p>
+                        </cms:if>
 
 <!--                         <td align="left"><img src="http://www.businesstoday.com.tw/getImage" alt="驗證碼" id="identifyImg2" /><img src="http://www.businesstoday.com.tw/mpstyle/default/images/icon_afresh.gif" alt="afresh" id="imgFresh2" /> 
                           <input type="text" placeholder="請輸入驗證碼" size="15" id="imgValue2" />
