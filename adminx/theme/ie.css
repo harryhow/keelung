@@ -16,6 +16,7 @@
 {
 	background-color:#FFFFFF;
 	border: 1px solid #E6E6E3;
+	float: left;
 }
 
 ul#admin-subnav, ul.k_element_deleted_nav{

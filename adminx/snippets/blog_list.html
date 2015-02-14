@@ -49,7 +49,7 @@
 		<div class="grid_8">
 		
 			<!-- Blog Post -->
-			<cms:pages masterpage='blog.php' 
+			<cms:pages masterpage='information_01.php' 
 						folder=k_folder_name 
 						start_on=k_archive_date 
 						stop_before=k_next_archive_date 
@@ -80,11 +80,11 @@
 					<!-- Blog Navigation -->
 					<p class="clearfix">
 						<cms:if k_paginate_link_next >
-							<a href="<cms:show k_paginate_link_next />" class="button float">&lt;&lt; Previous Posts</a>
+							<a href="<cms:show k_paginate_link_next />" class="button float">&lt;&lt; 上一頁</a>
 						</cms:if>
 						
 						<cms:if k_paginate_link_prev >
-							<a href="<cms:show k_paginate_link_prev />" class="button float right">Newer Posts >></a>
+							<a href="<cms:show k_paginate_link_prev />" class="button float right">下一頁</a>
 						</cms:if>
 					</p>
 				</cms:if>

@@ -1,5 +1,6 @@
 <?php require_once( 'adminx/cms.php' ); ?>
-<cms:template title='Blog' clonable='1' commentable='1'>
+<cms:template title='消息公告/新聞稿' clonable='1'>
+
   <cms:editable name='blog_content' type='richtext' />
   
   <cms:editable name='blog_image'
@@ -9,13 +10,11 @@
     type='image'
   />
   
-<!--   <cms:folder name="philosophy" title="Philosophy" />
-  <cms:folder name="history" title="History" />
-  <cms:folder name="jobs" title="Jobs" />
-  <cms:folder name="staff" title="Staff" />
-  <cms:folder name="clients" title="Clients" /> -->
-  
+  <cms:folder name="news" title="最新消息" />
+  <cms:folder name="press" title="新聞稿" />
+
 </cms:template>
+<cms:if k_is_page >
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -50,6 +49,7 @@ function MM_swapImage() { //v3.0
 </script>
 </head>
 <body onload="MM_preloadImages('images/menu/item_1r.jpg','images/menu/item_2r.jpg','images/menu/item_3r.jpg','images/menu/item_4r.jpg','images/menu/item_5r.jpg','images/menu/item_6r.jpg','images/menu/item_7r.jpg')">
+
 <div align="center" width="1024" id="bag">
 <table>
 	<tr><td height="866">
@@ -58,7 +58,7 @@ function MM_swapImage() { //v3.0
 	  <tr>
 	    <th align="center" scope="col"><table width="1026" border="0" cellpadding="0" cellspacing="0">
 	      <tr>
-	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
+	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
 	        </tr>
 	      </table></th>
 	    </tr>
@@ -68,7 +68,7 @@ function MM_swapImage() { //v3.0
           <div class="menu">
            <ul>
               <li>　　　　</li>
-              <li class="current"><a href="information_01.html">新聞稿/最新消息</a></li>
+              <li class="current"><a href="information_01.php">新聞稿/最新消息</a></li>
               <li><a href="information_02.html">基隆市區域計畫委員名單</a></li>
               <li><a href="information_03.html">計畫辦理進度</a></li>                      
             </ul>
@@ -81,30 +81,29 @@ function MM_swapImage() { //v3.0
                     <th height="300" colspan="2" align="right"><table><tr>
                       <td width="714">
 
-                      <!-- cms content editor block-->
-                      <div class="prop_desc">
-                          <span class="gray">
-                              <cms:editable name='prop_desc' type='richtext'>
-                              <!-- edit content from CMS backend -->
-                              </cms:editable>
-                          </span>
-                          <br class="clear"/>
-
-                          <!--
-                          <cms:editable 
-                            name='my_document'
-                            label='Downloadable File'
-                            desc='Upload the file here'
-                            type='file'
-                          />
-
-                           <a href="<cms:show my_document />" >下載</a> -->
-                        </div>
-
-                        <!-- cms content editor block -->
-                        <tr>
-                          <td align="right" class="news_black_13">更多瀏覽~</td>
-                        </tr>
+                          <!-- Blog Post -->
+                          <cms:pages masterpage='information_01.php' limit = '5' >
+                            <div class="post">
+                              <!-- Post Title -->
+                              <h3 class="title"><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h3>
+                              <!-- Post Title -->
+                              <cms:if k_page_foldertitle >
+                                <cms:set my_category=k_page_foldertitle />
+                              <cms:else />
+                                <cms:set my_category='其他' />
+                              </cms:if>
+                              <p class="sub"><a href="#"><cms:show my_category /></a> &bull; <cms:date k_page_date format='jS M, y'/> &bull;</p>
+                              <div class="hr dotted clearfix">&nbsp;</div>
+                              <!-- Post Title -->
+                              <img class="thumb" src="<cms:show blog_image />" alt=""/>
+                              <!-- Post Content -->
+                              <cms:show blog_content />
+                              <!-- Post Links -->
+                              <p class="clearfix">
+                                <a href="<cms:link masterpage='information_01.php' />" class="button float" >&lt;&lt; 回到最新消息...</a>
+                              </p>
+                            </div>
+                          </cms:pages>
                     </table>
 
                       <br />      
@@ -129,4 +128,7 @@ function MM_swapImage() { //v3.0
 
 </body>
 </html>
+<cms:else />
+  <cms:embed 'information_01_list.html' />
+</cms:if>
 <?php COUCH::invoke(); ?> 

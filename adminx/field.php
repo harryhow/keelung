@@ -837,7 +837,10 @@
             }
             else if( $this->k_type=='file' ){
                 if( $this->input_width ){ $style_rr = ' style="width:'.$this->input_width.'px"'; } // Set by repeatable tag
-                $html .= '<input type="text" size="65" value="'.$value.'" name="'.$input_name.'" id="'.$input_id.'" class="k_file_text" '.$notice0.$style_rr.'/>';
+                // harry: workaroud for text field overlapping in IE, this will cause cancel button can't use
+                $v = strrchr($value,'/');
+                $value = substr($v, 0+1, strlen($v));
+                $html .= '<input type="text" size="45" value="'.$value.'" name="'.$input_name.'" id="'.$input_id.'" class="k_file_text" '.$notice0.$style_rr.'/>';
                 if( K_USE_KC_FINDER ){
                     $link = K_ADMIN_URL.'includes/kcfinder/browse.php?cms=couch&type=file&TB_iframe=true&height=480&width=640&modal=true';
                     $html .= '<a class="button smoothbox" data-kc-finder="'.$input_id.'" href="'. $link .'"><span>'.$FUNCS->t('browse_server').'</span></a>';

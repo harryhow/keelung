@@ -79,12 +79,12 @@
     // Upload folder if not using the default upload folder within 'couch'.
     // Should be relative to your site (don't forget to set write permissions on it).
     // No leading or trailing slashes please.
-    //define( 'K_UPLOAD_DIR', 'myuploads' );
+    define( 'K_UPLOAD_DIR', 'adminx/myuploads' );
 
     // 12b.
     // Folder containing the embedded snippets if not using the default 'snippets' folder within 'couch'.
     // Should be relative to your site. No leading or trailing slashes please.
-    //define( 'K_SNIPPETS_DIR', 'mysnippets' );
+    define( 'K_SNIPPETS_DIR', 'adminx/snippets' );
 
     // 13.
     // Your Email address. Will be used in contact forms.

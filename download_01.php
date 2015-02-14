@@ -1,4 +1,11 @@
 <?php require_once( 'adminx/cms.php' ); ?>
+<cms:template title='規劃報告與區域計畫'>
+</cms:template>
+
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -40,7 +47,7 @@ function MM_swapImage() { //v3.0
 	  <tr>
 	    <th align="center" scope="col"><table width="1026" border="0" cellpadding="0" cellspacing="0">
 	      <tr>
-	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
+	        <th scope="col"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/menu/item_1r.jpg',1)"><img src="images/menu/item_1.jpg" width="271" height="71" id="Image1" /></a><a href="localplan_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/menu/item_2r.jpg',1)"><img src="images/menu/item_2.jpg" width="160" height="71" id="Image2" /></a><a href="manage_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/item_3r.jpg',1)"><img src="images/menu/item_3.jpg" width="140" height="71" id="Image3" /></a><a href="information_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/item_4r.jpg',1)"><img src="images/menu/item_4.jpg" width="109" height="71" id="Image4" /></a><a href="link_01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/item_5r.jpg',1)"><img src="images/menu/item_5.jpg" width="108" height="71" id="Image5" /></a><a href="expression_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/item_6r.jpg',1)"><img src="images/menu/item_6.jpg" width="107" height="71" id="Image6" /></a><a href="download_01.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/item_7r.jpg',1)"><img src="images/menu/item_7.jpg" width="130" height="71" id="Image7" /></a></th>
 	        </tr>
 	      </table></th>
 	    </tr>
@@ -50,8 +57,8 @@ function MM_swapImage() { //v3.0
           <div class="menu">
            <ul>
               <li>　　　　</li>
-              <li class="current"><a href="download_01.html">規劃報告與區域計畫</a></li>
-              <li><a href="download_02.html">例次會議紀錄</a></li>                                   
+              <li class="current"><a href="download_01.php">規劃報告與區域計畫</a></li>
+              <li><a href="download_02.php">例次會議紀錄</a></li>                                   
             </ul>
           </div>
         </div>
@@ -59,46 +66,34 @@ function MM_swapImage() { //v3.0
              <div class="posttext">
                 <table width="740" border="0" cellpadding="0" cellspacing="0" class="content">
                   <tr>
-                    <th height="300" colspan="2" align="right"><table width="98%" border="0" cellpadding="0" cellspacing="0">
-                      <tr class="resultstab">
+                    <th height="300" colspan="2" align="right" valign="top">
+                    <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                        <cms:repeatable name='my_multiple_file' >
+                        <cms:editable type='text' label='描述' name='my_desc' />  
+                          <cms:editable 
+                            name   = 'my_file'
+                            label  = '提供的下載檔案'
+                            desc   = '上傳你要分享的檔案'
+                            type   = 'file'
+                            order  = '1'
+                            hidden = '1'
+                          />
+                        </cms:repeatable>
+                        <tr class="resultstab">
                           <th width="15%" bgcolor="#EEEEEE" scope="col">時間</th>
                           <th width="67%" bgcolor="#EEEEEE" scope="col">內文</th>
                           <th width="18%" bgcolor="#EEEEEE" scope="col">檔案下載</th>
                         </tr>
+                    
+                        <cms:show_repeatable 'my_multiple_file' >
                         <tr class="resultstab">
-                          <td>2015/02/01</td>
-                          <td>期末報告</td>
-                          <td align="center">下載</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td align="center">&nbsp;</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td align="center">&nbsp;</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td align="center">&nbsp;</td>
-                        </tr>
-                        <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td align="center">&nbsp;</td>
-                        </tr>
-                         <tr class="resultstab">
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td align="center">&nbsp;</td>
+                          <td><cms:date k_page_date format='%F' locale='taipei' /></td>
+                          <td><cms:show my_desc /></td>                     
+                          <td align="center"><a href="<cms:show my_file />" >下載</a></td>
                          </tr>
-                    </table>                    
-                      <p><span class="news_black_13">更多瀏覽~</span></p></th>                    
-                  </tr>                 
-                </table>
+                        </cms:show_repeatable> 
+                        
+                    </table>
               </div>
              
             </div></th>
@@ -109,25 +104,6 @@ function MM_swapImage() { //v3.0
     </td></tr>
 </table>
 <table>
-<div class="prop_desc">
-        <b>Property Description:</b>
-        <span class="gray">
-            <cms:editable name='prop_desc'>
-            xxxxxx
-            </cms:editable>
-        </span>
-        <br class="clear"/>
-
-        <cms:editable 
-          name='my_document'
-          label='Downloadable File'
-          desc='Upload the file here'
-          type='file'
-        />
-
-        <a href="<cms:show my_document />" >下載</a>
-</div>
-
 
 <tr><td align="center" valign="middle" class="footer" >
   <p><br />

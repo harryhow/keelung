@@ -1,3 +1,7 @@
+<?php require_once( 'adminx/cms.php' ); ?>
+<cms:template title='例次會議記錄'>
+</cms:template>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -33,7 +37,7 @@ function MM_swapImage() { //v3.0
 <body onload="MM_preloadImages('images/menu/item_1r.jpg','images/menu/item_2r.jpg','images/menu/item_3r.jpg','images/menu/item_4r.jpg','images/menu/item_5r.jpg','images/menu/item_6r.jpg','images/menu/item_7r.jpg')">
 <div align="center" width="1024" id="bag">
 <table>
-	<tr><td height="753">
+	<tr><td height="866">
     <div id="item">
       <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	  <tr>
@@ -44,12 +48,13 @@ function MM_swapImage() { //v3.0
 	      </table></th>
 	    </tr>
 	  <tr>
-	    <th height="392" align="center" valign="top" bgcolor="#FFFFFF" scope="col">
+	    <th height="503" align="center" valign="top" bgcolor="#FFFFFF" scope="col">
         <div id="side_menu">
           <div class="menu">
            <ul>
-              <li>　　　　</li>              
-              <li class="current"><a href="link_01.html">相關網站</a></li>                      
+              <li>　　　　</li>
+              <li class="current"><a href="download_01.php">規劃報告與區域計畫</a></li>
+              <li><a href="download_02.php">例次會議紀錄</a></li>                                   
             </ul>
           </div>
         </div>
@@ -57,31 +62,46 @@ function MM_swapImage() { //v3.0
              <div class="posttext">
                 <table width="740" border="0" cellpadding="0" cellspacing="0" class="content">
                   <tr>
-                    <th height="300" colspan="2" align="left"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <th width="32%" rowspan="2" scope="col"><img src="images/link_1.jpg" width="219" height="135" alt="營建署" /></th>
-                        <th width="68%" height="62" align="left" scope="col"><img src="images/blue_dot.png" width="21" height="6" alt="圖" /><a href="http://www.cpami.gov.tw/chinese/index.php?option=com_content&amp;view=article&amp;id=10164&amp;Itemid=53" target="_blank">營建署全國區域計畫專區</a></th>
-                      </tr>
-                      <tr>
-                        <th align="left" scope="col"><img src="images/blue_dot.png" width="21" height="6" alt="圖" /><a href="http://www.cpami.gov.tw/chinese/index.php?option=com_content&amp;view=article&amp;id=13342:2012-07-10-09-02-43&amp;catid=36:2010-03-02-09-00-03&amp;Itemid=53" target="_blank">直轄市、縣市區域計畫專區</a></th>
-                      </tr>
-                      <tr>
-                        <td><img src="images/link_2.jpg" width="219" height="164" alt="基隆市政府" /></td>
-                        <td><img src="images/blue_dot.png" width="21" height="6" alt="圖" /><a href="http://www.klcg.gov.tw/" target="_blank">基隆市政府</a></td>
-                      </tr>                     
-                    </table>                      <p>&nbsp;</p></th>                    
-                  </tr>                 
-                </table>
+                    <th height="300" colspan="2" align="right" valign="top">
+                    <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                        <cms:repeatable name='my_multiple_file' >
+                          <cms:editable type='text' label='描述' name='my_desc' />  
+                          <cms:editable 
+                            name   = 'my_file'
+                            label  = '提供的下載檔案'
+                            desc   = '上傳你要分享的檔案'
+                            type   = 'file'
+                            order  = '1'
+                            hidden = '1'
+                          />
+                        </cms:repeatable>
+                        <tr class="resultstab">
+                          <th width="15%" bgcolor="#EEEEEE" scope="col">時間</th>
+                          <th width="67%" bgcolor="#EEEEEE" scope="col">內文</th>
+                          <th width="18%" bgcolor="#EEEEEE" scope="col">檔案下載</th>
+                        </tr>
+                    
+                        <cms:show_repeatable 'my_multiple_file' >
+                        <tr class="resultstab">
+                          <td><cms:date k_page_date format='%F' locale='taipei' /></td>
+                          <td><cms:show my_desc /></td>                     
+                          <td align="center"><a href="<cms:show my_file />" >下載</a></td>
+                         </tr>
+                        </cms:show_repeatable> 
+                        
+                    </table>
               </div>
              
             </div></th>
 	  </tr>
       </table>
-     
+
     </div>
     </td></tr>
 </table>
-<table><tr><td align="center" valign="middle" class="footer" >
+<table>
+
+<tr><td align="center" valign="middle" class="footer" >
   <p><br />
     基隆市政府 電話：02-2424-5001  傳真  02-2429-5179<br />
     規劃單位：財團法人國土規劃及不動產資訊中心電話：02-2367-2179    傳真 02-2362-8974<br />
@@ -91,3 +111,4 @@ function MM_swapImage() { //v3.0
 
 </body>
 </html>
+<?php COUCH::invoke(); ?> 
