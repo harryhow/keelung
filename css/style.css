@@ -4,7 +4,8 @@ style css
 
 /* Contact Form */
 
-	p.error								{margin-left:140px; margin-top:10px; color: red}
+	p.error 							{margin-left:140px; margin-top:10px; margin-bottom:3px; color: red}
+	p.success							{margin-left:140px; margin-top:10px; margin-bottom:3px; color: orange}
 	/*#contact_form ul					{float:left;}
 	#contact_form ul li					{margin:10px 0; list-style:none; position:relative; clear:both;}
 	#contact_form label					{line-height:40px; width:50px; text-align:right; float:left; margin-right:10px;}*/
